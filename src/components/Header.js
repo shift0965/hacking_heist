@@ -5,7 +5,7 @@ import { StyledHeader } from './styles/HeaderStyled'
 export default function Header() {
   return ( 
     <StyledHeader>
-        <div class="navbar_container">
+        <div className="navbar_container">
             <div id="navbar_logo">logo</div>
             <ul className="navbar_manu">
                 <li className="navbar_item">
