@@ -26,7 +26,7 @@ export default function Header() {
                     </li>
                     
                     <li className="navbar_btn">
-                        <a href="signup.html" className="signup_button" type="button">Sign up</a>
+                        <Link className="navbar_links" to="/">kids</Link>
                     </li>
                 </ul>
             </div>
