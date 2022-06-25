@@ -4,6 +4,7 @@ export const StyledShoppingCart = styled.div`
     display: flex;
     justify-content: center;
 
+
     .contentContainer{
         width: 100%;
         max-width: 1000px;
@@ -20,7 +21,7 @@ export const StyledShoppingCart = styled.div`
 
         .product{
             display: flex;
-            width: 150px;
+            width: 200px;
             justify-content: center;
         }
 
@@ -38,6 +39,7 @@ export const StyledShoppingCart = styled.div`
     }
     
     .itemsContainer{
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         margin-top: 20px;
@@ -46,7 +48,7 @@ export const StyledShoppingCart = styled.div`
 
         .itemContainer{
                 width: 100%;
-                height: 150px;
+                height: 200px;
                 border: 2px solid none;
                 display: flex;
                 justify-content: space-between;
@@ -65,8 +67,8 @@ export const StyledShoppingCart = styled.div`
 
                     img{
                         margin: auto auto;
-                        max-height: 150px;
-                        width: 150px;
+                        height: 200px;
+                        max-width: 200px;
                     }
                 }
 

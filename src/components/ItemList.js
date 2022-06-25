@@ -4,28 +4,32 @@ export const itemList= [
         title: 'cool sweater',
         price: '50',
         image: 'cloth1.png',
-        number: 1
+        number: 1,
+        size: ['S','M','L']
     },
     {
         id: 2,
         title: 'awesome sweater',
         price: '30',
         image: 'cloth2.png',
-        number: 2
+        number: 2,
+        size: ['S','M', 'L']
     },
     {
         id: 3,
         title: 'cool hat',
         price: '20',
         image: '',
-        number: 1
+        number: 1,
+        
     },
     {
         id: 4,
         title: 't-shirt',
         price: '30',
         image: '',
-        number: 3
+        number: 3,
+        size: ['S','M', 'L']
     },
     {
         id: 5,

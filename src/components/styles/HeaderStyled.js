@@ -48,24 +48,27 @@ export const StyledHeader = styled.nav`
     .navbar_btn{
         height: 80px;
         padding: 20px 10px;
+
+        .signup_button{
+            color: white;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius:20px;
+            background: black;
+        }
+
+        .signup_button:hover{
+            background: orange;
+            transition: all 0.3s;
+        }
+
     }
 
-    .signup_button{
-        color: white;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius:20px;
-        background: black;
-    }
-
-    .signup_button:hover{
-        background: orange;
-        transition: all 0.3s;
-    }
+    
 
     .navbar_links:hover{
         color: orange;

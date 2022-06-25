@@ -2,12 +2,17 @@ import styled from 'styled-components'
 
 
 export const Body = styled.div`
+    max-width: 1300px;
     display: flex;
+    margin : 20px auto;
     flex-direction: column;
+
     .itemList{
+        
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
 
         .itemContainer{
             margin: 20px;
