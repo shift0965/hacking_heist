@@ -1,4 +1,3 @@
-import { upload } from "@testing-library/user-event/dist/upload"
 import { useState } from "react"
 
 export const itemList= [

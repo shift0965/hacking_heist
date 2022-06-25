@@ -1,6 +1,6 @@
 import { StyledTryOn } from "./styles/TryOnStyled";
 import { itemList } from "./ItemList";
-import { faSadCry, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSmile } from "@fortawesome/free-solid-svg-icons";
 import { faSadTear } from "@fortawesome/free-solid-svg-icons";
