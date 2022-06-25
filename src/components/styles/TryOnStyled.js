@@ -33,6 +33,7 @@ export const StyledTryOn = styled.div`
                     opacity: 0.8;
                     cursor: pointer;
                     z-index: 20;
+                    transition: 0.7s;
                 }
 
             .triggerBtn:hover{
@@ -43,7 +44,7 @@ export const StyledTryOn = styled.div`
             .triggerBtn.off{
                 left: 0px;
                 transform:scaleX(-1); 
-                transition: .7s;
+                transition: 0.7s;
             }
 
             .personal{
