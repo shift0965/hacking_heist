@@ -43,6 +43,17 @@ export const StyledSignIn = styled.section`
             //"." for class ex: .classA
             //"#" for id ex: #idB
             //noting for tag ex: label
+         
+         //class submit
+         .submit{
+            background: blue;
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            right: 15px;
+            bottom: 15px;
+            font-size: 20px;
+            border:none;
 
 
         }
