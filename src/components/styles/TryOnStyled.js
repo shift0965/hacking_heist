@@ -237,6 +237,32 @@ export const StyledTryOn = styled.div`
                     transition: .5s all;
                     width: 200px;
                 }
+                .suggestionContainer{
+                    width: 100%;
+                    margin-top: 60px;
+                    font-weight: 600;
+
+
+                    .good{
+                        margin-top: 15px;
+
+                        span{
+                            margin-left: 10px;
+                            font-size: 30px;
+                            color: green;
+                        }
+                    }
+
+                    .bad{
+                        margin-top: 15px;
+
+                        span{
+                            margin-left: 10px;
+                            font-size: 30px;
+                            color: red;
+                        }
+                    }
+                }
             }
 
             .shoppingCart{   

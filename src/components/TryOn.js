@@ -1,7 +1,9 @@
 import { StyledTryOn } from "./styles/TryOnStyled";
 import { itemList } from "./ItemList";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faSadCry, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSmile } from "@fortawesome/free-solid-svg-icons";
+import { faSadTear } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { StyledModel } from "./styles/ModelStyled";
 
@@ -16,10 +18,19 @@ export default function TryOn({firstTryOn}) {
         leg: 0
     })
 
+    const [suggestion, setSuggestion] = useState("");
+
     //checking product
     const [product, setProduct] = useState(firstTryOn);
 
-    console.log(product);
+    const sizeChange = (target) => {
+        if(target === 'M') setSuggestion("");
+        if(target === 'L') setSuggestion("It may be too long for you");
+        if(target === 'XL') setSuggestion("It is way too large for you");
+        if(target === 'S') setSuggestion("It may be little small for you");
+        if(target === 'XS') setSuggestion("It is way too samll for you");
+    }
+
     
     const handleChange = e => {
         const {name, value} = e.target
@@ -28,7 +39,6 @@ export default function TryOn({firstTryOn}) {
             [name] : value
         })
     }
-
 
     const [wearList, setWearList] = useState([product]);
     //console.log(wearList);
@@ -44,6 +54,8 @@ export default function TryOn({firstTryOn}) {
         wearList.push(target);
         setWearList(wearList);
     }
+
+    
 
     //shopping cart on or off
     const [spOn, setsp] = useState(true);
@@ -176,9 +188,16 @@ export default function TryOn({firstTryOn}) {
                             Select size
                             <div className="btnsArea" >
                             {product.size.map((item, index) => 
-                                <button className="sizeBtn" key={index}>{item}</button>                            
+                                <button className="sizeBtn" key={index} onClick={() => sizeChange(item)}>{item} </button>                            
                             )}
                             </div>
+                        </div>
+
+                        <div className="suggestionContainer">
+                            Suggestion
+                            {suggestion.length === 0 ? 
+                                <div className="good">Perfectly match!<span><FontAwesomeIcon icon={faSmile}/></span></div>:
+                                <div className="bad">{suggestion}<span><FontAwesomeIcon icon={faSadTear}/></span></div>}
                         </div>
                     </div>
 
@@ -196,7 +215,6 @@ export default function TryOn({firstTryOn}) {
                                     <div className="productName">
                                         <label className="name">{item.title}</label>   
                                     </div>
-                                    
                                 </div>
                             )}    
                         </div> 

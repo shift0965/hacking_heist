@@ -7,17 +7,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from 'react';
 import TryOn from './components/TryOn';
 import SignIn from './components/SignIn';
+import { itemList } from './components/ItemList';
 
 function App() {
 
 
   const [signPage, setSignPage] = useState();
-  const [firstTryOn, setFirstTryOn] = useState({
-    name: '',
-    price: '',
-    color: [''],
-    size: ['']
-  });
+  const [firstTryOn, setFirstTryOn] = useState(itemList[0]);
 
   const setSignOpen = () => {
     setSignPage(true);

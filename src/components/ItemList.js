@@ -1,3 +1,4 @@
+import { upload } from "@testing-library/user-event/dist/upload"
 import { useState } from "react"
 
 export const itemList= [
@@ -7,13 +8,14 @@ export const itemList= [
         price: '50',
         image: 'cloth1.png',
         number: 1,
-        size: ['xs','S','M','L','XL'],
+        size: ['XS','S','M','L','XL'],
         type: 'up',
-        color: ['red', 'blue', 'green'],
+        color: ['red', 'blue', 'black', 'gray'],
+
 
         width: '400px',
         height: '400px',
-        top: '5px',
+        top: '10px',
         left: '50px'
         
 
@@ -26,42 +28,73 @@ export const itemList= [
         number: 2,
         size: ['S','M', 'L'],
         type: 'up',
-        color: ['red', 'blue', 'green'],
+        color: ['green', 'purple', 'orange'],
         
+
         width: '350px',
         height: '350px',
         top: '50px',
-        left: '80px'
+        left: '80px',
     },
     {
         id: 3,
-        title: 'cool hat',
+        title: 'fasion earmuffs',
         price: '20',
-        image: '',
+        image: 'cloth6.png',
         number: 1,
+        color: ['black', 'gray'],
+        size: ['S','M', 'L'],
+        type: 'hat',
+
+        width: '300px',
+        height: '100px',
+        top: '0px',
+        left: '185px'
         
     },
     {
         id: 4,
-        title: 't-shirt',
-        price: '30',
-        image: '',
+        title: 'super boost',
+        image: 'cloth4.png',
+        price: '100',
         number: 3,
-        size: ['S','M', 'L']
+        size: ['US10', 'US11', 'US12', 'US13', 'US14'],
+
+        color: ['orange', 'pink', 'white'],
+        width: '0px',
+        height: '0px',
+        top: '0px',
+        left: '185px'
     },
     {
         id: 5,
-        title: 'shocks',
-        price: '10',
-        image: '',
-        number: 4
+        title: 'scarf',
+        price: '30',
+        image: 'cloth5.png',
+        number: 4,
+        size: ["2 m"],
+
+        color: ['tgray', 'black', 'aqua'],
+        width: '0px',
+        height: '0px',
+        top: '0px',
+        left: '185px'
     },
     {
         id: 6,
-        title: 'white shirt',
-        price: '15',
-        image: '',
-        number: 1
+        title: 'flight jacket',
+        price: '200',
+        image: 'cloth3.png',
+        number: 1,
+        type: 'up',
+
+
+        size: ['XS','S','M','L','XL'],
+        color: ['orange', 'pink', 'white'],
+        width: '300px',
+        height: '300px',
+        top: '65px',
+        left: '100px'
     }
 ]
 
