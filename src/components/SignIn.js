@@ -41,8 +41,6 @@ const SignIn = ({setSignClose}) => {
                         <input type="password" name="confirmpw" id="cpw"/>
                     </div>
                     
-                    <br>
-                    
                     <div className="logIn">
                         <h2>Log In</h2>
                         <label htmlFor="username2">
