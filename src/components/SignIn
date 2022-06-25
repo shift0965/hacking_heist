@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Sign In</title>
+    </head>
+    <body>
+        <section id="layers">
+            <form>
+             <div class="signIn">
+                <h2>Sign In</h2>
+                
+                <label for="fName">
+                    First Name:
+                </label>
+                <input type="text" name="firstName" id="fName">
+                <br>
+                
+                <label for="lName">
+                    Last Name:
+                </label>
+                <input type="text" name="lastName" id="lName">
+                
+                <label for="username1">
+                    Email:
+                </label>
+                <input type="text" name="email" id="username1">
+                
+                <br>
+                
+                <label for="pw1">
+                    Password:
+                </label>
+                <input type="password" name="pw" id="pw1">
+                
+                <label for="cpw">
+                    confirm Password:
+                </label>
+                <input type="password" name="confirmpw" id="cpw">
+             </div>
+            
+            <br>
+            
+             <div class="logIn">
+                <h2>Log In</h2>
+                <label for="username2">
+                    Email:
+                </label>
+                <input type="text" name="email" id="username2">
+                
+                <br>
+                
+                <label for="pw2">
+                    Password:
+                </label>
+                <input type="password" name="pw" id="pw2">
+             </div>
+             <div class="submit">
+                <input type="submit" value="Next"
+                
+            </form>
+        </section>
+    </body>
+</html>

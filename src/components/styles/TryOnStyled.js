@@ -138,7 +138,11 @@ export const StyledTryOn = styled.div`
                 }
             }
 
-            .shoppingCart{     
+            .shoppingCart{   
+                position: absolute; 
+                right: 0px; 
+                top: 0px;
+
                 width: 350px;
                 border-radius: 30px;
                 height: 700px;
@@ -151,11 +155,10 @@ export const StyledTryOn = styled.div`
             }
 
             .shoppingCart.active{
-                transition: .5s all;
+                transition: .6s all;
                 opacity: 0;
-                width: 20px;
-                height: 20px;
                 transform: scale(0);
+                transform-origin:  320px 30px;
             }
 
             h3{
