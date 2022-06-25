@@ -18,23 +18,29 @@ const SignIn = ({setSignClose}) => {
                         </label>
                         <input type="text" name="firstName" id="fName"/>
                         
+                        <br>
+                            
                         <label htmlFor="lName">
                             Last Name:
                         </label>
                         <input type="text" name="lastName" id="lName"/>
                         
+                        <br>   
+                            
                         <label htmlFor="username1">
                             Email:
                         </label>
                         <input type="text" name="email" id="username1"/>
                         
-                        
+                        <br>
                         
                         <label htmlFor="pw1">
                             Password:
                         </label>
                         <input type="password" name="pw" id="pw1"/>
                         
+                        <br>    
+                            
                         <label htmlFor="cpw">
                             confirm Password:
                         </label>
@@ -49,7 +55,7 @@ const SignIn = ({setSignClose}) => {
                         </label>
                         <input type="text" name="email" id="username2"/>
                         
-                        
+                        <br>
                         
                         <label for="pw2">
                             Password:
