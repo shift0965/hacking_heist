@@ -3,13 +3,14 @@ import { itemList } from "./ItemList";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { WearList } from "./ItemList";
+import Model from "./Model";
 
 
 export default function TryOn() {
 
-    const HandleTryOn = (id) =>{
-        
-    }
+    const {wearList, addWearList} = WearList();
+
 
     const [spOn, setsp] = useState(true);
 
@@ -27,9 +28,7 @@ export default function TryOn() {
         <StyledTryOn spOn = {spOn}>
             <div className="contentContainer">
                 <div className="left">
-                    <div className="tryOnArea">
-                        
-                    </div>
+                    <Model/>
                 </div>
                 <div className="right">
                     <div className="productArea">
@@ -67,7 +66,7 @@ export default function TryOn() {
                         <h3>Choose to try on</h3>
                         <div className="itemsContainer">
                             {itemList.map((item) => 
-                                <div className="itemContainer" key={item.id}> 
+                                <div className="itemContainer" key={item.id} onClick={() => addWearList({item})}> 
                                     <div className="imgContainer">
                                         <img src={`./imgs/${item.image}`} alt={item.title} /> 
                                     </div>
@@ -84,3 +83,4 @@ export default function TryOn() {
         </StyledTryOn>
     )
 }
+

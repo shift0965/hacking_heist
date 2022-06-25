@@ -18,13 +18,6 @@ export const StyledTryOn = styled.div`
             height: 100%;
             display: flex;
             
-            .tryOnArea{
-                margin: auto auto;
-                height: 650px;
-                width: 500px;
-                border-radius: 20px;
-                background: gray;
-            }
         }
 
         .right{

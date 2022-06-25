@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 export const itemList= [
     {
         id: 1,
@@ -5,7 +7,16 @@ export const itemList= [
         price: '50',
         image: 'cloth1.png',
         number: 1,
-        size: ['S','M','L']
+        size: ['S','M','L'],
+        type: 'up',
+
+
+        width: '400px',
+        height: '400px',
+        top: '5px',
+        left: '50px'
+        
+
     },
     {
         id: 2,
@@ -13,7 +24,14 @@ export const itemList= [
         price: '30',
         image: 'cloth2.png',
         number: 2,
-        size: ['S','M', 'L']
+        size: ['S','M', 'L'],
+        type: 'up',
+
+        
+        width: '350px',
+        height: '350px',
+        top: '50px',
+        left: '80px'
     },
     {
         id: 3,
@@ -46,3 +64,46 @@ export const itemList= [
         number: 1
     }
 ]
+
+export const CartList = () => {
+    const [cartList, setCarList] = useState([])
+
+    const addClothes = e => {
+        let target = e.target.value;
+        console.log(cartList);
+        cartList.forEach((item, index,arr) => {
+            if (item.type === target.type){
+                arr.splice(index, 1);
+            }
+        })
+        cartList.push(target);
+        setCarList(cartList);
+    }
+    return{cartList, addClothes}
+}
+
+
+
+
+
+export const WearList = (SetWearList) => {
+    const [wearList, setWearList] = useState([])
+
+    const addWearList = (target) => {
+        wearList.forEach((item, index,arr) => {
+            if (item.type === target.type){
+                arr.splice(index, 1);
+            }
+        })
+        wearList.push(target);
+        setWearList(wearList);
+
+        console.log("wearList " + wearList);
+
+        SetWearList(wearList);
+    }
+
+    return{wearList, addWearList}
+}
+
+
