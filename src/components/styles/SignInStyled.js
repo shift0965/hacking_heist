@@ -15,9 +15,9 @@ export const StyledSignIn = styled.section`
         background: #E8E8E8;
         border-radius: 30px;
         padding: 30px;
-        width: 600px;
-        height: 500px;
-        margin: 50px auto;
+        width: 500px;
+        height: 580px;
+        margin: 30px auto;
 
         //class close button
         .closeBtn{
@@ -33,11 +33,18 @@ export const StyledSignIn = styled.section`
 
         //class sign in
         .signIn{
-            //display: flex; ...
-
-            //tag label in class signIn
+            
+            display: flex;
+            flex-direction: column;
+            
             label{
-                //font-size: 30px; ...
+            }
+            input{
+                width: 430px;
+            }
+
+            h2{
+                margin-bottom: 10px;
             }
 
             //"." for class ex: .classA
@@ -45,16 +52,31 @@ export const StyledSignIn = styled.section`
             //noting for tag ex: label
          
          //class submit
-         .submit{
-            background: blue;
-            position: absolute;
-            width: 80px;
-            height: 30px;
-            right: 15px;
-            bottom: 15px;
-            font-size: 20px;
-            border:none;
+            .submit{
+                background: white;
+                width: 200px;
+                height: 30px;
+                font-size: 20px;
+                border:none;
+                margin: 20px auto;
+            }
+        }
 
+        .logIn{
+            display: flex;
+            flex-direction: column;
+            h2{
+                margin-bottom: 10px;
+            }
+
+            .submit{
+                background: white;
+                width: 200px;
+                height: 30px;
+                font-size: 20px;
+                border:none;
+                margin: 20px auto;
+            }
 
         }
 

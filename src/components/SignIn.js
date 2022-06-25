@@ -10,7 +10,7 @@ const SignIn = ({setSignClose}) => {
                 <button className="closeBtn" onClick={() => setSignClose()}>x</button>
 
                 <form>
-                <div className="signIn">
+                    <div className="signIn">
                         <h2>Sign In</h2>
                         
                         <label htmlFor="Name">
@@ -39,6 +39,10 @@ const SignIn = ({setSignClose}) => {
                             confirm Password:
                         </label>
                         <input type="password" name="confirmpw" id="cpw"/>
+
+                        <button className="submit">Submit</button>
+
+
                     </div>
                     
                     <div className="logIn">
@@ -54,10 +58,8 @@ const SignIn = ({setSignClose}) => {
                             Password:
                         </label>
                         <input type="password" name="pw" id="pw2"/>
-                    </div>
 
-                    <div className="submit">
-                        <input type="submit" value="Next"/>
+                        <button className="submit">Next</button>
                     </div>
                 </form>
             </section>
