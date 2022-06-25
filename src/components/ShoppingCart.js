@@ -2,10 +2,11 @@ import { StyledShoppingCart } from "./styles/ShoppingCartStyled";
 import { itemList } from "./ItemList";
 import { useNavigate} from "react-router-dom";
 
-export default function ShoppingCart() {
+export default function ShoppingCart({setFirstTryOn}) {
     const navigate = useNavigate();
 
-    const HandleTryOn = (id) =>{
+    const HandleTryOn = (item) =>{
+        setFirstTryOn(item);
         navigate("/TryOn");
     }
 
@@ -45,7 +46,7 @@ export default function ShoppingCart() {
                                 <div className="name">${item.price}</div>
                                 <div className="name">{item.number}</div>
                                 <div className="name">
-                                    <button onClick={() => HandleTryOn(item.id)}>try on</button>
+                                    <button onClick={() => HandleTryOn(item)}>try on</button>
                                 </div>
                         </div>       
                     </div>

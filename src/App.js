@@ -6,24 +6,35 @@ import ShoppingCart from './components/ShoppingCart';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from 'react';
 import TryOn from './components/TryOn';
+import SignIn from './components/SignIn';
 
 function App() {
 
-  const [TryOnProduct, setProduct] = useState({
-    id: 0,
 
-
+  const [signPage, setSignPage] = useState();
+  const [firstTryOn, setFirstTryOn] = useState({
+    name: '',
+    price: '',
+    color: [''],
+    size: ['']
   });
+
+  const setSignOpen = () => {
+    setSignPage(true);
+  }
+  const setSignClose = () => {
+    setSignPage(false);
+  }
 
   return (
     <Router> 
       <div className="App">
-        <Header/>
-
+        <Header setSignOpen={setSignOpen}/>
+        {signPage ? <SignIn setSignClose={setSignClose}/>:<div></div>}
         <Routes>
           <Route path="/" element={<Homepage/>}/>
-          <Route path="/ShoppingCart" element={<ShoppingCart/>}/>
-          <Route path="/TryOn" element={<TryOn />}/>
+          <Route path="/ShoppingCart" element={<ShoppingCart setFirstTryOn={setFirstTryOn}/>}/>
+          <Route path="/TryOn" element={<TryOn firstTryOn={firstTryOn}/>}/>
         </Routes>
       </div> 
     </Router>

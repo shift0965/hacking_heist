@@ -14,9 +14,117 @@ export const StyledTryOn = styled.div`
         grid-template-columns: 0.5fr 0.5fr;
 
         .left{
-            
+            position: relative;
             height: 100%;
             display: flex;
+
+            .triggerBtn{
+                    position: absolute;
+                    width: 20px;
+                    height: 80px;
+                    background: white;
+                    border: none;
+                    border-top-left-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    left: 280px;
+                    top: 250px;
+                    font-weight: 900;
+                    font-size:20px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                    z-index: 20;
+                }
+
+            .triggerBtn:hover{
+                transition: 0.6s all;
+                background-color: gray;
+            }
+
+            .triggerBtn.off{
+                left: 0px;
+                transform:scaleX(-1); 
+                transition: .7s;
+            }
+
+            .personal{
+                top: 60px;
+                left: 0px;
+                position: absolute;
+                width: 300px;
+                height: 500px;
+                z-index: 10; 
+                border-radius: 40px;
+                background-color: #E0E0E0;
+                opacity: 0.9;
+                transition: .7s all;
+                
+                h3{
+                    margin-bottom: 10px;
+                    margin-top: 30px;
+                    text-align:center;
+                }
+
+                form{
+                    display:flex;
+                    flex-direction: column;
+                    margin: auto 40px;
+                }
+
+                .form_inputs{
+                    width: 220px;
+                    display: flex;
+                    margin: 16px auto;
+                    justify-content: space-between;
+                }
+
+                .form_inputs label{
+                    font-weight: 600;
+                    font-size: 14px;
+                    opacity: 90%;
+                    height: 30px;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    
+                }
+
+                .form_inputs input{
+                    width: 80px;
+                    height: 30px;
+                    padding: 5px;
+                    border-radius: 3px;
+                    border: none;  
+                    font-size: 14px;
+                }
+
+                .form_input_btn{
+                    position: relative;
+                    margin-top: 25px;
+                    width: 100%;
+                    height: 40px; 
+                    display: flex;
+                    border: none;
+                    border-radius: 5px;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+
+                .form_input_btn:hover{
+                    color: white;
+                    background: black;
+                    transition: 0.3s;
+                }
+            }
+
+            .personal.off{
+                left: -300px;     
+                opacity: 0;
+                transition: .7s;
+            }
             
         }
 

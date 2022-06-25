@@ -7,9 +7,9 @@ export const itemList= [
         price: '50',
         image: 'cloth1.png',
         number: 1,
-        size: ['S','M','L'],
+        size: ['xs','S','M','L','XL'],
         type: 'up',
-
+        color: ['red', 'blue', 'green'],
 
         width: '400px',
         height: '400px',
@@ -26,7 +26,7 @@ export const itemList= [
         number: 2,
         size: ['S','M', 'L'],
         type: 'up',
-
+        color: ['red', 'blue', 'green'],
         
         width: '350px',
         height: '350px',

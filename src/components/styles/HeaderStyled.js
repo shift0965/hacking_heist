@@ -22,6 +22,7 @@ export const StyledHeader = styled.nav`
         display: flex;
         text-decoration: none;
         padding: 10px;
+        cursor: pointer;
     }
 
     .navbar_manu{
@@ -59,6 +60,7 @@ export const StyledHeader = styled.nav`
             padding: 10px 20px;
             border-radius:20px;
             background: black;
+            border: none;
         }
 
         .signup_button:hover{

@@ -4,7 +4,7 @@ import { StyledHeader } from './styles/HeaderStyled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-export default function Header() {
+export default function Header({setSignOpen}) {
   return ( 
         <StyledHeader>
             <div className="navbar_container">
@@ -26,7 +26,7 @@ export default function Header() {
                     </li>
                     
                     <li className="navbar_btn">
-                        <Link className="signup_button" to="/">Sign Up</Link>
+                        <button className="signup_button" onClick={() => setSignOpen()}>Sign Up</button>
                     </li>
                 </ul>
             </div>
