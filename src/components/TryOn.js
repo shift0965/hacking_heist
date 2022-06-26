@@ -52,14 +52,6 @@ export default function TryOn({firstTryOn}) {
                 comment: 'It is way too samll for you'
             });
     }
-
-    const suggestionArea = () => {
-        {suggestion.result === "good"? <div>{suggestion.comment}<span className="good"><FontAwesomeIcon icon={faSmile}/></span></div>:<div></div>}
-        {suggestion.result === "bad"? <div>{suggestion.comment}<span className="bad"><FontAwesomeIcon icon={faSadTear}/></span></div>:<div></div>}
-        {suggestion.result === "ok"? <div>{suggestion.comment}</div>:<div></div>}
-        {suggestion.result === "none"? <div>Choose a size to try on!</div>:<div></div>}
-    }
-
     
     const handleChange = e => {
         const {name, value} = e.target
