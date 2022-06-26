@@ -16,13 +16,20 @@ export const StyledHeader = styled.nav`
     }
 
 
-    #navbar_logo{       
+    #navbar_logo{ 
+        margin-top: 5px;
+        height: 80px; 
         font-size: 30px;
         align-items: center;
         display: flex;
         text-decoration: none;
         padding: 10px;
         cursor: pointer;
+
+        img{
+            width: 135%;
+            height: 135%;
+        }
     }
 
     .navbar_manu{
