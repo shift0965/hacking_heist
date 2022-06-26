@@ -18,17 +18,46 @@ export default function TryOn({firstTryOn}) {
         leg: 0
     })
 
-    const [suggestion, setSuggestion] = useState("");
+    const [suggestion, setSuggestion] = useState({
+        result: "none",
+        comment: ""
+    });
 
     //checking product
     const [product, setProduct] = useState(firstTryOn);
 
     const sizeChange = (target) => {
-        if(target === 'M') setSuggestion("");
-        if(target === 'L') setSuggestion("It may be too long for you");
-        if(target === 'XL') setSuggestion("It is way too big for you");
-        if(target === 'S') setSuggestion("It may be little small for you");
-        if(target === 'XS') setSuggestion("It is way too samll for you");
+        if(target === 'M') setSuggestion({
+            result: 'good',
+            comment: 'Perfectlay matched!'
+        });
+        if(target === 'L') setSuggestion(
+            {
+                result: 'ok',
+                comment: 'It is slightly too big for you'
+            });
+        if(target === 'XL') setSuggestion(
+            {
+                result: 'bad',
+                comment: 'It is way too big for you'
+            });
+        if(target === 'S') setSuggestion(
+            {
+                result: 'ok',
+                comment: 'It may be little small for you'
+            });
+        if(target === 'XS') setSuggestion(
+            {
+                result: 'bad',
+                comment: 'It is way too samll for you'
+            });
+    }
+
+    const suggestionArea = () => {
+        {suggestion.result === "good"? <div>{suggestion.comment}<span className="good"><FontAwesomeIcon icon={faSmile}/></span></div>:<div></div>}
+        {suggestion.result === "bad"? <div>{suggestion.comment}<span className="bad"><FontAwesomeIcon icon={faSadTear}/></span></div>:<div></div>}
+        {suggestion.result === "ok"? <div>{suggestion.comment}</div>:<div></div>}
+        {suggestion.result === "none"? <div>Choose a size to try on!</div>:<div></div>}
     }
 
     
@@ -71,6 +100,7 @@ export default function TryOn({firstTryOn}) {
         setsp(!spOn);
     }
 
+
     
 
     return(
@@ -103,7 +133,6 @@ export default function TryOn({firstTryOn}) {
                                     value = {values.waist}
                                     onChange = {handleChange}
                                     />
-                            </div>
                             </div>
                             <div className="form_inputs">
                                 <label htmlFor="hip" className="form-label">Hip</label>
@@ -207,9 +236,10 @@ export default function TryOn({firstTryOn}) {
 
                         <div className="suggestionContainer">
                             Suggestion
-                            {suggestion.length === 0 ? 
-                                <div className="good">Perfectly match!<span><FontAwesomeIcon icon={faSmile}/></span></div>:
-                                <div className="bad">{suggestion}<span><FontAwesomeIcon icon={faSadTear}/></span></div>}
+                            {suggestion.result === "good"? <div>{suggestion.comment}<span className="good"><FontAwesomeIcon icon={faSmile}/></span></div>:<div></div>}
+                            {suggestion.result === "bad"? <div>{suggestion.comment}<span className="bad"><FontAwesomeIcon icon={faSadTear}/></span></div>:<div></div>}
+                            {suggestion.result === "ok"? <div>{suggestion.comment}</div>:<div></div>}
+                            {suggestion.result === "none"? <div>Choose a size to try on!</div>:<div></div>}                    
                         </div>
                     </div>
 

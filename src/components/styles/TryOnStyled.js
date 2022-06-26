@@ -243,28 +243,27 @@ export const StyledTryOn = styled.div`
                     margin-top: 60px;
                     font-weight: 600;
 
-
-                    .good{
+                    div{
                         margin-top: 15px;
-
+                        
                         span{
                             margin-left: 10px;
                             font-size: 30px;
+                        }
+
+                        .good{
                             color: green;
                         }
-                    }
 
-                    .bad{
-                        margin-top: 15px;
-
-                        span{
-                            margin-left: 10px;
-                            font-size: 30px;
+                        .bad{
                             color: red;
                         }
+                        
                     }
+                        
                 }
             }
+        }
 
             .shoppingCart{   
                 position: absolute; 
