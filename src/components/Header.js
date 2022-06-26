@@ -8,7 +8,9 @@ export default function Header({setSignOpen}) {
   return ( 
         <StyledHeader>
             <div className="navbar_container">
-                <div id="navbar_logo">logo</div>
+                <div id="navbar_logo">
+                    <img src="logoTryItOn.png" />
+                </div>
                 <ul className="navbar_manu">
                     <li className="nav-links">
                         <Link className="navbar_links" to="/">men</Link>
