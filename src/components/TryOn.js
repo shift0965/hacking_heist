@@ -26,7 +26,7 @@ export default function TryOn({firstTryOn}) {
     const sizeChange = (target) => {
         if(target === 'M') setSuggestion("");
         if(target === 'L') setSuggestion("It may be too long for you");
-        if(target === 'XL') setSuggestion("It is way too large for you");
+        if(target === 'XL') setSuggestion("It is way too big for you");
         if(target === 'S') setSuggestion("It may be little small for you");
         if(target === 'XS') setSuggestion("It is way too samll for you");
     }
