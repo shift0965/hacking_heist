@@ -94,13 +94,25 @@ export default function TryOn({firstTryOn}) {
 
                             </div>
                             <div className="form_inputs">
-                                <label htmlFor="weight" className="form-label">Weight</label>
+                                <label htmlFor="waist" className="form-label">Waist</label>
                                     <input 
                                     type="number" 
-                                    name="weight" 
+                                    name="waist" 
                                     className="form-input" 
-                                    placeholder="Enter your weight"
-                                    value = {values.weight}
+                                    placeholder="Enter your waist"
+                                    value = {values.waist}
+                                    onChange = {handleChange}
+                                    />
+                            </div>
+                            </div>
+                            <div className="form_inputs">
+                                <label htmlFor="hip" className="form-label">Hip</label>
+                                    <input 
+                                    type="number" 
+                                    name="hip" 
+                                    className="form-input" 
+                                    placeholder="Enter your hip"
+                                    value = {values.hip}
                                     onChange = {handleChange}
                                     />
                             </div>
